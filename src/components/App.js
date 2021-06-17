@@ -1,17 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { loadMeals } from "../actions/mealsAction";
+import React from "react";
 import Nav from "./Nav";
 import ItemPanel from "./ItemPanel";
+import Home from "../pages/Home";
 
 const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadMeals());
-  });
   return (
     <div className="App">
       <Nav />
+      <Home />
       <ItemPanel />
     </div>
   );
