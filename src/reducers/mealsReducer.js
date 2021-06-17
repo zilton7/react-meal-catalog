@@ -5,7 +5,7 @@ const initialState = {
 const mealsReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_MEALS":
-      return { ...state };
+      return { ...state, meals: action.payload.meals };
     default:
       return { ...state };
   }
