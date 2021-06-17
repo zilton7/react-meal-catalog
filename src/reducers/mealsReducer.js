@@ -1,11 +1,14 @@
-const initialState = {
-  meals: [],
-};
+const initialState = {};
 
 const mealsReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_MEALS":
-      return { ...state, meals: action.payload.meals };
+      return {
+        ...state,
+        vegetarian: action.payload.vegetarianMeals,
+        vegan: action.payload.veganMeals,
+        seafood: action.payload.seafoodMeals,
+      };
     default:
       return { ...state };
   }

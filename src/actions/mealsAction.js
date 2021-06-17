@@ -13,12 +13,27 @@ export const loadMealCategories = () => async (dispatch) => {
   });
 };
 
-export const loadMeals = () => async (dispatch) => {
+export const loadVegetarianMeals = () => async (dispatch) => {
   const mealsData = await axios.get(mealsByCategoryURL("Vegetarian"));
   dispatch({
     type: "FETCH_MEALS",
     payload: {
       meals: mealsData.data,
+    },
+  });
+};
+
+export const loadMeals = () => async (dispatch) => {
+  const vegetarianMealsData = await axios.get(mealsByCategoryURL("Vegetarian"));
+  const veganMealsData = await axios.get(mealsByCategoryURL("Vegan"));
+  const seafoodMealsData = await axios.get(mealsByCategoryURL("Seafood"));
+
+  dispatch({
+    type: "FETCH_MEALS",
+    payload: {
+      vegetarianMeals: vegetarianMealsData.data.meals,
+      veganMeals: veganMealsData.data.meals,
+      seafoodMeals: seafoodMealsData.data.meals,
     },
   });
 };
