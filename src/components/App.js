@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import ItemPanel from "./ItemPanel";
+import MealList from "./MealList";
 import Home from "../pages/Home";
 
 const App = () => {
@@ -8,7 +8,6 @@ const App = () => {
     <div className="App">
       <Nav />
       <Home />
-      <ItemPanel />
     </div>
   );
 };

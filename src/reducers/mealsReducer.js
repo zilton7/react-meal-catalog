@@ -1,4 +1,6 @@
-const initialState = {};
+const initialState = {
+  meals: [],
+};
 
 const mealsReducer = (state = initialState, action) => {
   switch (action.type) {
