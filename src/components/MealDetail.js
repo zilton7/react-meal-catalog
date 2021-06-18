@@ -7,6 +7,7 @@ const GameDetail = () => {
   return (
     <div>
       <h3>{mealData.strMeal}</h3>
+      <img src={mealData.strMealThumb} />
     </div>
   );
 };

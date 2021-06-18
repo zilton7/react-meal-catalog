@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
+import { Link } from "react-router-dom";
 
 const Meal = ({ name, image, id }) => {
   const dispatch = useDispatch();
@@ -7,9 +8,11 @@ const Meal = ({ name, image, id }) => {
     dispatch(loadDetail(id));
   };
   return (
-    <span onClick={loadDetailHandler}>
-      <h3>{name}</h3>
-      <img className="meal-thumb" src={image} />
+    <span onClick={loadDetailHandler} id={id}>
+      <Link to={`/game/${id}`}>
+        <h3>{name}</h3>
+        <img className="meal-thumb" src={image} />
+      </Link>
     </span>
   );
 };

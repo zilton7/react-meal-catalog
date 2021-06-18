@@ -1,5 +1,7 @@
 const initialState = {
-  meals: [],
+  vegan: [],
+  vegetarian: [],
+  seafood: [],
 };
 
 const mealsReducer = (state = initialState, action) => {

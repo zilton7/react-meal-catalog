@@ -1,4 +1,4 @@
-const initialState = { meal: {} };
+const initialState = { meal: { meals: [{}] } };
 
 const detailReducer = (state = initialState, action) => {
   switch (action.type) {

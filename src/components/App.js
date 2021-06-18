@@ -7,11 +7,8 @@ const App = () => {
   return (
     <div className="App">
       <Nav />
-      <Route path="/">
+      <Route path={["/meal/:id", "/"]}>
         <Home />
-      </Route>
-      <Route path="/:id">
-        <Nav />
       </Route>
     </div>
   );
