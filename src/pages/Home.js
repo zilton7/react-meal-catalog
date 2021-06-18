@@ -13,29 +13,13 @@ const Home = () => {
   useEffect(() => {
     dispatch(loadMeals());
   }, [dispatch]);
-  const { vegetarian, vegan, seafood } = useSelector((state) => state.meals);
+  const meals = useSelector((state) => state.meals.meals);
   return (
     <div>
       {pathId && <MealDetail />}
       <h2>Meals</h2>
       <div className="meals">
-        {vegan.map((meal) => (
-          <Meal
-            id={meal.idMeal}
-            name={meal.strMeal}
-            image={meal.strMealThumb}
-            key={meal.idMeal}
-          />
-        ))}
-        {vegetarian.map((meal) => (
-          <Meal
-            id={meal.idMeal}
-            name={meal.strMeal}
-            image={meal.strMealThumb}
-            key={meal.idMeal}
-          />
-        ))}
-        {seafood.map((meal) => (
+        {meals.map((meal) => (
           <Meal
             id={meal.idMeal}
             name={meal.strMeal}

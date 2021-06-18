@@ -1,7 +1,5 @@
 const initialState = {
-  vegan: [],
-  vegetarian: [],
-  seafood: [],
+  meals: [],
 };
 
 const mealsReducer = (state = initialState, action) => {
@@ -9,9 +7,7 @@ const mealsReducer = (state = initialState, action) => {
     case "FETCH_MEALS":
       return {
         ...state,
-        vegetarian: action.payload.vegetarianMeals,
-        vegan: action.payload.veganMeals,
-        seafood: action.payload.seafoodMeals,
+        meals: action.payload.meals,
       };
     default:
       return { ...state };

@@ -9,9 +9,11 @@ export const loadMeals = () => async (dispatch) => {
   dispatch({
     type: "FETCH_MEALS",
     payload: {
-      vegetarianMeals: vegetarianMealsData.data.meals,
-      veganMeals: veganMealsData.data.meals,
-      seafoodMeals: seafoodMealsData.data.meals,
+      meals: [
+        ...vegetarianMealsData.data.meals,
+        ...veganMealsData.data.meals,
+        ...seafoodMealsData.data.meals,
+      ],
     },
   });
 };
