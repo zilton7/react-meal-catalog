@@ -35,8 +35,21 @@ nav {
   padding: 2rem 2rem;
   background: white;
   position: absolute;
+  top: 10%;
   left: 10%;
   color: black;
+}
+
+.meal-detail-head {
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+}
+
+.meal-detail-head span {
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .meal-detail-wrapper {
