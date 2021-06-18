@@ -1,17 +1,15 @@
-import React from "react";
-import Nav from "./Nav";
-import Home from "../pages/Home";
-import { Route } from "react-router-dom";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import Nav from './Nav';
+import Home from '../pages/Home';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Nav />
-      <Route path={["/meal/:id", "/"]}>
-        <Home />
-      </Route>
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Nav />
+    <Route path={['/meal/:id', '/']}>
+      <Home />
+    </Route>
+  </div>
+);
 
 export default App;

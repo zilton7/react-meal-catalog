@@ -2,7 +2,7 @@ const initialState = { meal: { meals: [{}] } };
 
 const detailReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DETAIL":
+    case 'GET_DETAIL':
       return {
         ...state,
         meal: action.payload.meal,

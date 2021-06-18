@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
-import mealsReducer from "./mealsReducer";
-import detailReducer from "./detailReducer";
+import { combineReducers } from 'redux';
+import mealsReducer from './mealsReducer';
+import detailReducer from './detailReducer';
 
 const rootReducer = combineReducers({
   meals: mealsReducer,
