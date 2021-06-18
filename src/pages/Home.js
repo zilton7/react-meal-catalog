@@ -1,3 +1,4 @@
+import { Game } from "phaser";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadMeals } from "../actions/mealsAction";
@@ -15,7 +16,12 @@ const Home = () => {
       <h2>Meals</h2>
       <div className="games">
         {vegan.map((meal) => (
-          <Meal name={meal.strMeal} image={meal.strMealThumb} />
+          <Meal
+            id={meal.idMeal}
+            name={meal.strMeal}
+            image={meal.strMealThumb}
+            key={meal.idMeal}
+          />
         ))}
         {vegetarian.map((meal) => (
           <Meal name={meal.strMeal} image={meal.strMealThumb} />

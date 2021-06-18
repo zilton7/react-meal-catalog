@@ -1,12 +1,9 @@
 // Base URL
 const baseUrl = "https://www.themealdb.com/api/json/v1/1/";
 
-// Meal Categories
-const mealsURL = baseUrl + "categories.php";
-
 // Meal by category
-const mealsByCategoryURL = (category) => {
-  return baseUrl + `filter.php?c=${category}`;
-};
+const mealsByCategoryURL = (category) => baseUrl + `filter.php?c=${category}`;
+// Meal by id
+const mealsByIdURL = (category) => baseUrl + `lookup.php?i=${category}`;
 
-export { mealsURL, mealsByCategoryURL };
+export { mealsByCategoryURL, mealsByIdURL };
