@@ -7,7 +7,14 @@ nav {
   justify-content: space-around;
 }
 
-.items-row {
-  display: flex;
-  justify-content: space-around;
+.games {
+  margin: 10px;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.meal-thumb {
+  width: 100%;
 }

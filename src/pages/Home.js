@@ -13,8 +13,14 @@ const Home = () => {
   return (
     <div>
       <h2>Meals</h2>
-      <div>
+      <div className="games">
         {vegan.map((meal) => (
+          <Meal name={meal.strMeal} image={meal.strMealThumb} />
+        ))}
+        {vegetarian.map((meal) => (
+          <Meal name={meal.strMeal} image={meal.strMealThumb} />
+        ))}
+        {seafood.map((meal) => (
           <Meal name={meal.strMeal} image={meal.strMealThumb} />
         ))}
       </div>

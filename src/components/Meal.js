@@ -1,12 +1,8 @@
 const Meal = ({ name, image }) => {
   return (
     <span>
-      <div>
-        <h3>{name}</h3>
-      </div>
-      <div>
-        <img src={image} />
-      </div>
+      <h3>{name}</h3>
+      <img className="meal-thumb" src={image} />
     </span>
   );
 };
