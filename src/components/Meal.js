@@ -9,7 +9,7 @@ const Meal = ({ name, image, id }) => {
   };
   return (
     <span onClick={loadDetailHandler} id={id}>
-      <Link to={`/game/${id}`}>
+      <Link to={`/meal/${id}`}>
         <h3>{name}</h3>
         <img className="meal-thumb" src={image} />
       </Link>

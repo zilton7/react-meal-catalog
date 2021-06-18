@@ -14,12 +14,11 @@ const Home = () => {
     dispatch(loadMeals());
   }, [dispatch]);
   const { vegetarian, vegan, seafood } = useSelector((state) => state.meals);
-  console.log(vegan);
   return (
     <div>
       {pathId && <MealDetail />}
       <h2>Meals</h2>
-      <div className="games">
+      <div className="meals">
         {vegan.map((meal) => (
           <Meal
             id={meal.idMeal}
