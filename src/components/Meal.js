@@ -1,7 +1,7 @@
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import loadDetail from "../actions/detailAction";
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import loadDetail from '../actions/detailAction';
 
 const Meal = ({ name, image, id }) => {
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ Meal.propTypes = {
 };
 
 Meal.defaultProps = {
-  image: "",
+  image: '',
 };
 
 export default Meal;
