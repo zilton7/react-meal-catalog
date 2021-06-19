@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import loadMeals from '../actions/mealsAction';
 import Meal from '../components/Meal';
-import MealDetail from '../components/MealDetail';
+import MealDetail from './MealDetail';
 
 const Home = () => {
   const [input, setInput] = useState('');

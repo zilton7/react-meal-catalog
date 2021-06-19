@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Nav from './Nav';
-import Home from '../pages/Home';
+import Home from '../containers/Home';
 
 const App = () => (
   <div className="App">

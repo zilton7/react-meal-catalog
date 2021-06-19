@@ -1,12 +1,12 @@
-import React from "react";
-import { render, cleanup, screen } from "@testing-library/react";
-import Meal from "../../components/Meal";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import store from "../../store";
+import React from 'react';
+import { render, cleanup, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import Meal from '../../components/Meal';
+import store from '../../store';
 
 afterEach(cleanup);
-it("displays heading", () => {
+it('displays heading', () => {
   render(
     <Provider store={store}>
       <BrowserRouter>
@@ -17,7 +17,7 @@ it("displays heading", () => {
           key="005784"
         />
       </BrowserRouter>
-    </Provider>
+    </Provider>,
   );
-  expect(screen.getByText("Test")).toBeTruthy();
+  expect(screen.getByText('Test')).toBeTruthy();
 });
