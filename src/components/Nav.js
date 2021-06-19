@@ -1,9 +1,6 @@
 const Nav = () => (
   <nav>
-    <a href="/">Home</a>
-    <a href="/">Catalogue</a>
-    <a href="/">About</a>
-    <a href="/">Contact</a>
+    <h1>Veggie Meal Catalog</h1>
   </nav>
 );
 

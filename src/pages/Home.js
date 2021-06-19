@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-import loadMeals from '../actions/mealsAction';
-import Meal from '../components/Meal';
-import MealDetail from '../components/MealDetail';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import loadMeals from "../actions/mealsAction";
+import Meal from "../components/Meal";
+import MealDetail from "../components/MealDetail";
 
 const Home = () => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const handleChange = (e) => {
     e.preventDefault();
     setInput(e.target.value);
   };
   const location = useLocation();
-  const pathId = location.pathname.split('/')[2];
+  const pathId = location.pathname.split("/")[2];
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadMeals());
@@ -25,14 +25,15 @@ const Home = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search for Meal"
-        onChange={handleChange}
-        value={input}
-      />
+      <div className="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search for Meal"
+          onChange={handleChange}
+          value={input}
+        />
+      </div>
       {pathId && <MealDetail />}
-      <h2>Meals</h2>
       <div className="meals">
         {meals.map((meal) => (
           <Meal
