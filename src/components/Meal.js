@@ -1,7 +1,7 @@
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import loadDetail from '../actions/detailAction';
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import loadDetail from "../actions/detailAction";
 
 const Meal = ({ name, image, id }) => {
   const dispatch = useDispatch();
@@ -9,18 +9,18 @@ const Meal = ({ name, image, id }) => {
     dispatch(loadDetail(id));
   };
   return (
-    <span
+    <Link
       role="button"
+      className="meal"
       tabIndex="0"
       onClick={loadDetailHandler}
       onKeyDown={loadDetailHandler}
       id={id}
+      to={`/meal/${id}`}
     >
-      <Link to={`/meal/${id}`}>
-        <h3>{name}</h3>
-        <img className="meal-thumb" src={image} alt="" />
-      </Link>
-    </span>
+      <h3 className="meal-name">{name}</h3>
+      <img className="meal-thumb" src={image} alt="" />
+    </Link>
   );
 };
 
@@ -31,7 +31,7 @@ Meal.propTypes = {
 };
 
 Meal.defaultProps = {
-  image: '',
+  image: "",
 };
 
 export default Meal;

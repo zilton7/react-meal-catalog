@@ -1,13 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const MealDetail = () => {
   const history = useHistory();
   const exitDetailHandler = (e) => {
     const el = e.target;
-    if (el.classList.contains('close-meal-detail')) {
-      history.push('/');
+    if (el.classList.contains("close-meal-detail")) {
+      history.push("/");
     }
   };
 
@@ -34,7 +34,7 @@ const MealDetail = () => {
           </span>
         </div>
         <div className="meal-detail-wrapper">
-          <h3>{mealData.strMeal}</h3>
+          <h3 className="meal-detail-name">{mealData.strMeal}</h3>
           <img src={mealData.strMealThumb} alt="" />
         </div>
       </div>
